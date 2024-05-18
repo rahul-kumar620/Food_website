@@ -1,0 +1,42 @@
+.card2-container{
+    width: 20vw;
+    height: 60vh;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: -130px;
+    margin-top: 110px;
+    transform: rotate(-20deg) skew(0deg,10deg);
+}
+.icon2{
+    display: flex;
+    flex-direction: row;
+}
+.icon-2{
+    color: pink;
+    margin: 20px;
+    padding: 20px;
+    font-size: 30px;
+}
+.text-2{
+    margin-top: 2.5rem;
+    margin-left: -30px;
+    font-size: 20px;
+    font-weight: 600;
+
+}
+.text2{
+    margin: 20px;
+    padding: 20px;
+    margin-top: -50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.image2{
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px;
+}
