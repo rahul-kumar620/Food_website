@@ -8,12 +8,12 @@ import Cards4 from "../Cards/Cards4";
 const Header: React.FC = () => {
   return (
     <>
-      <div className="container">
+      <div className="container header_container">
         <div className="main-div">
           <p>Signature</p>
         </div>
         <div id="main-header">
-        <h1 id="header">Best trending Now.</h1>
+          <h1 id="header">Best trending Now.</h1>
         </div>
         <div className="btn">
           <p className="btn-1">Get Started</p>
@@ -22,21 +22,20 @@ const Header: React.FC = () => {
           </div>
         </div>
         <div className="trunip">
-          <img src="images/turnip-image.png" alt=""/>
+          <img src="images/turnip-image.png" alt="" />
         </div>
       </div>
 
       {/* hero section start */}
       <div className="background-container">
-      <div className="background">
-            <Cards/>
-           <Cards2/>
-           <Cards3/>
-          <Cards4/>
-      </div>
+        <div className="background">
+          <Cards />
+          <Cards2 />
+          <Cards3 />
+          <Cards4 />
+        </div>
       </div>
       {/* hero section end */}
-
     </>
   );
 };

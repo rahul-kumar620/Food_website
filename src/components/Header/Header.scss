@@ -1,93 +1,213 @@
-
-.main-div p{
-    margin-top: 40px;
-    font-family: "Cedarville Cursive", cursive;
-    color: rgb(247, 172, 132);
-    margin: 150px;
-    margin-top: 0.5in;
-}
-p{
-    font-size: 40px;
-}
-#main-header{
-    font-size: 50px;
-    font-family: roboto;
-}
-#header{
-    font-weight: 100;
-    margin: 150px;
-    margin-top: -185px;
-    color: rgb(49, 37, 21);
-}
-.btn{
-    width: 230px;
-    height: 70px;
-    margin-left: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -100px;
-    color: white;
-    background-color: rgb(244,139 ,82 );
-    
-}
-.btn-1{
-    margin-left: 50px;
-    margin: 15px;
-    font-size: 1.2rem;
-    text-align: center;
-}
-.arrow{
-    width: 10px;
-    height: 5px;
-    margin-top: -20px;
-    font-size: 1.6rem;
-    color: white;
-}
-
-.background-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -25px;
-    margin-bottom: 30px;
-}
-
-.background{
-    width: 90vw;
-    height: 90dvh;
-    display: flex;
-    flex-direction: row;
-    overflow: hidden;
-    background-color: rgb(41,31,14);
-    z-index: -1;
-}
-
-
-.trunip{
-    position: absolute;
-    top: 5%;
-    left: 70%;
-    animation: dropFromTop 2s ease-out;
-    & img {
-        width: 180px;
-        height: 240px;
-        transform: rotate(50deg);
+.header_container {
+  & .main-div {
+    & p {
+      margin-top: 40px;
+      font-family: "Cedarville Cursive", cursive;
+      color: rgb(247, 172, 132);
+      margin: 150px;
+      margin-top: 0.5in;
     }
+  }
+}
+
+p {
+  font-size: 40px;
+}
+#main-header {
+  font-size: 50px;
+  font-family: roboto;
+}
+#header {
+  font-weight: 100;
+  margin: 150px;
+  margin-top: -185px;
+  color: rgb(49, 37, 21);
+}
+.btn {
+  width: 230px;
+  height: 70px;
+  margin-left: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -100px;
+  color: white;
+  background-color: rgb(244, 139, 82);
+}
+.btn-1 {
+  margin-left: 50px;
+  margin: 15px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.arrow {
+  width: 10px;
+  height: 5px;
+  margin-top: -20px;
+  font-size: 1.6rem;
+  color: white;
+}
+
+.background-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -25px;
+  margin-bottom: 30px;
+}
+
+.background {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  background-color: rgb(41, 31, 14);
+  z-index: -1;
+}
+
+.trunip {
+  position: absolute;
+  top: 5%;
+  left: 70%;
+  animation: dropFromTop 2s ease-out;
+  & img {
+    width: 180px;
+    height: 240px;
+    transform: rotate(50deg);
+  }
 }
 
 @keyframes dropFromTop {
-    0% {
-      transform: translateY(-100vh);
-      opacity: 0;
+  0% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .header_container {
+    padding: 25px;
+
+    .main-div p {
+      margin: 30px;
     }
-    50% {
-      opacity: 1;
+
+    #main-header {
+      font-size: 3rem; 
     }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
+
+    #header {
+      font-size: 3rem; 
+      margin: 25px;
+      margin-top: -30px;
+    }
+
+    .btn {
+      width: 180px;
+      height: 60px;
+      margin-left: 20px;
+      margin-top: 20px;
+    }
+
+    .btn-1 {
+      font-size: 1rem;
+      margin-left: 10px;
+    }
+
+    .arrow {
+      font-size: 1.2rem;
+      margin-top: 0;
     }
   }
 
- 
+  .trunip {
+    top: 10%;
+    left: 60%;
+
+    & img {
+      width: 150px;
+      height: 200px;
+    }
+  }
+  .background-container{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    // margin-top: 25px;
+     //margin-bottom: 30px;
+  }
+  .background {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    
+  }
+}
+
+@media (max-width: 430px) {
+  .header_container {
+    
+
+    .main-div p {
+      margin: 10px;
+    }
+
+    #main-header {
+      font-size: 2rem; 
+    }
+
+    #header {
+      font-size: 2rem; 
+      margin: 10px;
+      margin-top: -30px;
+    }
+
+    .btn {
+      width: 150px;
+      height: 50px;
+      margin-left: 15px;
+      margin-top: 10px;
+    }
+
+    .btn-1 {
+      font-size: 0.8rem;
+      margin-left: 5px;
+    }
+
+    .arrow {
+      font-size: 1.2rem;
+      margin-top: -5px;
+    }
+  }
+
+  .trunip {
+    top: 15%;
+    left: 50%;
+
+    & img {
+      width: 120px;
+      height: 160px;
+    }
+  }
+  .background-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .background {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+  }
+}

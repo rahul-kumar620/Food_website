@@ -1,43 +1,95 @@
-.main-class{
-    width: 100%;
-    height: 5rem;
-    display: grid;
-    grid-template-columns: 5rem 1fr 2fr 1fr 5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-.logo{
+.navbar_container {
+  width: 100%;
+  height: 80px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  & .menu_container {
     display: flex;
-    grid-column: 2/2;
-    justify-content: start;
     align-items: center;
-    font-size: 1.2rem;
+    & .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+
+      & .color {
+        color: rgb(247, 172, 132);
+      }
+    }
+
+    & .navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-wrap: nowrap;
+
+      & .links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        list-style: none;
+      }
+    }
+  }
+
+  & .action-btn {
+    color: rgb(244, 139, 82);
+    border:2px solid rgb(244, 139, 82);
+    padding: 3px 3px;
+  }
+    & .menu{
+        text-align: right;
+        font-size: 30px;
+        color: orange;
+        cursor: pointer;
+        display: none;
+    }
+    .mobile-navbar {
+        display: none;
+        position: absolute;
+        top: 60px; 
+        right: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+        &.mobile_navbar {
+          display: block;
+        }
+  
+        .mobile-links {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+  
+          li {
+            padding: 1rem;
+            border-bottom: 1px solid #ddd;
+          }
+        }
+      }
 }
- .color{
-    color: rgb(247, 172, 132);
- }
- .navbar{
-    margin-right: 200px;
- }
-.navbar ul{
-     height: 5rem;
-     display: flex;
-     justify-content: space-around;
-     align-items: center;
-}
-.navbar ul li{
-    list-style: none;
-}
-#start-box{
-    width: 118px;
-    height: 50px;
-    margin-left: 200px;
-}
-#start{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:rgb(247, 172, 132 );
-    font-size: medium;
-    margin-top: 35px;
-    border: 2px solid rgb(247,172,132);
+
+/* responsive design*/
+@media (max-width: 992px) {
+
+    .navbar_container {
+        .menu_container {
+            .navbar {
+                .links{
+                    display: none;
+                }
+            }
+        }
+        .action-btn{
+            display: none;
+        }
+        .menu{
+            display: block;
+        }
+    }
 }

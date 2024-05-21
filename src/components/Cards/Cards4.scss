@@ -10,6 +10,7 @@
     margin-top: 250px;
     z-index: -2;
     transform: rotate(40deg) skew(-5deg,-10deg);
+    animation: card4-slide 1.4s ease-in-out 0s alternate running,card4-shake 5s ease-in-out 3s infinite;
 }
 .icon4{
     display: flex;
@@ -40,4 +41,110 @@
     border-radius: 8px;
     overflow: hidden;
     margin: 20px;
+}
+
+@keyframes card4-slide {
+    0%{
+        transform: translateX(-40vw) translateY(-30vh) rotate(-40deg) skew(10deg,10deg);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0) translateY(0) rotate(40deg) skew(-5deg,-10deg);
+        opacity: 1;
+    }
+  }
+
+  @keyframes card4-shake {
+
+    50%{
+       transform: skew(0deg,0deg)  rotate(40deg);
+    } 
+ }
+
+  /* Media queries for medium devices */
+@media (max-width: 1030px) {
+    .card4-container {
+        width: 25vw;
+        height: 35vh;
+        margin: -80px;
+        margin-top: 100px;
+        transform: rotate(40deg) skew(-5deg, -10deg);
+    }
+
+    .icon-4 {
+        font-size: 25px;
+    }
+
+    .text-4 {
+        font-size: 18px;
+    }
+    .text4{
+        font-size: 20px;
+        margin-top: -40px;
+    }
+    @keyframes card4-slide {
+        0%{
+            transform: translateX(-50vw) translateY(-10vh) rotate(-30deg) skew(5deg,5deg);
+            opacity: 0;
+        }
+        100%{
+            transform: translateX(0) translateY(0) rotate(40deg) skew(-5deg,-10deg);
+            opacity: 1;
+        }
+    }
+}
+
+ /* Media queries for tablet devices */
+@media (max-width: 780px) {
+    .card4-container {
+        width: 25vw;
+        height: 30vh;
+        margin: -80px;
+        margin-top: 150px;
+        transform: rotate(40deg) skew(-5deg, -10deg);
+        
+    }
+
+    .icon-4 {
+        font-size: 25px;
+    }
+
+    .text-4 {
+        font-size: 18px;
+    }
+    .text4{
+        font-size: 10px;
+        margin-top: -40px;
+    }
+}
+
+/* Media queries for mobile devices */
+@media (max-width: 440px) {
+    .card4-container {
+        width: 25vw;
+        height: 25vh;
+        margin: -50px;
+        margin-top: 100px;
+        transform: rotate(40deg) skew(-5deg, -10deg);
+        
+    }
+    .icon{
+        display: flex;
+        flex-direction: row;
+     }
+
+    .icon-4 {
+        font-size: 20px;
+        margin: -7px;
+    }
+
+    .text-4 {
+        font-size: 10px;
+        margin: 3px;
+    }
+    .text4{
+        font-size: 6px;
+        margin-top: -20px;
+        margin-left: -8px;
+    }
 }

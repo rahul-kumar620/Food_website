@@ -8,7 +8,9 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 120px;
     margin-top: 70px;
+    animation: card3-shake 5s ease-in-out 3s infinite;
     transform: rotate(20deg) skew(0deg, -5deg);
+    animation: card3-slide 1.3s ease-in-out 0s alternate running,card3-shake 5s ease-in-out 3s infinite;
 }
 .icon3{
     display: flex;
@@ -38,4 +40,99 @@
     border-radius: 8px;
     overflow: hidden;
     margin: 20px;
+}
+@keyframes card3-slide {
+    0%{
+        transform: translateX(-37vw) translateY(7vh) rotate(-40deg) skew(10deg,10deg);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0) translateY(0) rotate(20deg) skew(0deg, -5deg);
+        opacity: 1;
+    }
+  }
+  @keyframes card3-shake {
+
+    50%{
+       transform: skew(0deg,0deg)  rotate(20deg);
+    } 
+ }
+ 
+ /* Media queries for tab devices */
+ @media (max-width: 1030px) {
+    .card3-container {
+        width: 25vw;
+        height: 35vh;
+        margin: 60px;
+        margin-top: 50px;
+        transform: rotate(20deg) skew(0deg, -5deg);
+        animation: card3-slide 1.3s ease-in-out 0s alternate running, card3-shake 5s ease-in-out 3s infinite;
+    }
+
+    .icon-3 {
+        font-size: 25px;
+    }
+
+    .text-3 {
+        font-size: 25px;
+    }
+    .text3{
+        font-size: 20px;
+        margin-top: -40px;
+    }
+}
+
+ /* Media queries for tab devices */
+ @media (max-width: 780px) {
+    .card3-container {
+        width: 25vw;
+        height: 30vh;
+        margin: 60px;
+        margin-top: 50px;
+        transform: rotate(20deg) skew(0deg, -5deg);
+        animation: card3-slide 1.3s ease-in-out 0s alternate running, card3-shake 5s ease-in-out 3s infinite;
+    }
+
+    .icon-3 {
+        font-size: 25px;
+    }
+
+    .text-3 {
+        font-size: 25px;
+    }
+    .text3{
+        font-size: 10px;
+        margin-top: -40px;
+    }
+}
+
+/* Media queries for mobile devices */
+@media (max-width: 440px) {
+    .card3-container {
+        width: 25vw;
+        height: 25vh;
+        margin: 30px;
+        margin-top: 40px;
+        transform: rotate(20deg) skew(0deg, -5deg);
+        animation: card3-slide 1.3s ease-in-out 0s alternate running, card3-shake 5s ease-in-out 3s infinite;
+    }
+     
+    .icon{
+        display: flex;
+        flex-direction: row;
+     }
+    .icon-3 {
+        font-size: 20px;
+        margin: -8px;
+    }
+
+    .text-3 {
+        font-size: 10px;
+        margin: 3px;
+    }
+    .text3{
+         font-size: 6px;
+         margin-top: -20px;
+         margin-left: -8px;
+    }
 }
